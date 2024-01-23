@@ -4,7 +4,13 @@
 
 ##### Terraform docker container allows you to run Terraform subcommands by passing in their names and arguments as part of the docker run.
 
-Link to dockerhub:
+###### Docker image was built with this command:
+```sh
+docker build -t terraform .
+```
+
+
+Link to docker hub:
 https://hub.docker.com/r/denisvoznik/terraform
 
 To pull this docker container:
