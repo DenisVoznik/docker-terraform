@@ -1,8 +1,16 @@
 
 ## _Terraform Docker container_
-----------------------
-##### Terraform docker container allows you to run Terraform subcommands by passing in their names and arguments as part of docker run.
-  
+
+
+##### Terraform docker container allows you to run Terraform subcommands by passing in their names and arguments as part of the docker run.
+
+Link to dockerhub:
+https://hub.docker.com/r/denisvoznik/terraform
+
+To pull this docker container:
+```sh
+docker pull denisvoznik/terraform:0.9
+```
 
 ##### You have to pass your *.tf folder as a mounted volume in the docker run command.
 
@@ -11,5 +19,6 @@
 
 ```sh
 cd your-terrafrom-tf-folder
-docker run --rm -v ${pwd}:/app/tf-files terraform init
+docker run --rm -v ${pwd}:/app/tf-files denisvoznik/terraform:0.9 init
 ```
+
