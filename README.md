@@ -25,6 +25,6 @@ docker pull denisvoznik/terraform:0.9
 
 ```sh
 cd your-terrafrom-tf-folder
-docker run --rm -v ${pwd}:/app/tf-files denisvoznik/terraform:0.9 init
+docker run --rm -v ${pwd}:/app/tf-files denisvoznik/terraform:1.0 init
 ```
 
