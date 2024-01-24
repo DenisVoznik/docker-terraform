@@ -15,7 +15,7 @@ https://hub.docker.com/r/denisvoznik/terraform
 
 To pull this docker container:
 ```sh
-docker pull denisvoznik/terraform:0.9
+docker pull denisvoznik/terraform:1.0
 ```
 
 ##### You have to pass your *.tf folder as a mounted volume in the docker run command.
