@@ -25,5 +25,5 @@ jobs:
           context: .
           platforms: linux/amd64
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/terraform-github/latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/terraform-github:latest
 
