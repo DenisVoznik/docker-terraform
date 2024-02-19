@@ -21,10 +21,9 @@ pipeline {
         stage('Docker tag and push') {
             steps {
                 sh """
-                    short_branch=${GIT_BRANCH}
-                    short_branch=${short_branch##origin/}
+                    git_branch_local=$(echo $GIT_BRANCH | sed -e "s|origin/||g")
                     docker tag terraform denisvoznik/terraform-dz
-                    docker push denisvoznik/terraform-dz:${GIT_BRANCH}
+                    docker push denisvoznik/terraform-dz:${git_branch_local}
                 """
             }
         }
