@@ -22,7 +22,7 @@ pipeline {
             steps {
                 sh """
                     docker tag terraform denisvoznik/terraform-dz
-                    docker push denisvoznik/terraform-dz:${GIT_LOCAL_BRANCH}
+                    docker push denisvoznik/terraform-dz:${GIT_BRANCH##origin/}
                 """
             }
         }
