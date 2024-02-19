@@ -21,8 +21,10 @@ pipeline {
         stage('Docker tag and push') {
             steps {
                 sh """
+                    short_branch=${GIT_BRANCH}
+                    short_branch=${short_branch##origin/}
                     docker tag terraform denisvoznik/terraform-dz
-                    docker push denisvoznik/terraform-dz:${GIT_BRANCH\#\#origin/}
+                    docker push denisvoznik/terraform-dz:${GIT_BRANCH}
                 """
             }
         }
