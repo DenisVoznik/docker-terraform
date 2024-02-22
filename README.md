@@ -8,7 +8,7 @@
 ```sh
 docker build -t terraform .
 ```
-
+  
 
 Link to docker hub:
 https://hub.docker.com/r/denisvoznik/terraform
